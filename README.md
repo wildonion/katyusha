@@ -2,7 +2,7 @@
 
 ```pip install aiogram ujson aiohttp[speedups]```
 
-```pip install nuitka```
+```pip install pyinstaller```
 
 ```npm install pm2@latest -g```
 
@@ -12,7 +12,7 @@
 
 # Build
 
-```nuitka --follow-imports --plugin-enable=multiprocessing --standalone --show-progress --show-scons --include-plugin-directory=utils katyusha.py```
+```pyinstaller --onefile --windowed --icon=katyusha.ico katyusha.py```
 
 # Usage
 
