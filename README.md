@@ -1,12 +1,10 @@
 # Setup
 
-```conda activate katyusha```
-
 ```pip install aiogram ujson aiohttp[speedups]```
 
-```npm install pm2@latest -g```
+```pip install nuitka```
 
-```conda install -c conda-forge nuitka```
+```npm install pm2@latest -g```
 
 # Development
 
