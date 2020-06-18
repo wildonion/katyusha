@@ -1,3 +1,4 @@
 __pycache__
 katyusha.build
-katyusha.dist
+katyusha.dist/*
+!katyusha.dist/katyusha.exe
