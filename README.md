@@ -16,4 +16,4 @@
 
 # Usage
 
-run ```katyusha.exe``` inside dist folder
+Spread ```katyusha.exe``` inside dist folder, between your victims.
