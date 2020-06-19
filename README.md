@@ -16,4 +16,4 @@
 
 # Usage
 
-run ```katyusha.exe```
+run ```katyusha.exe``` inside dist folder
