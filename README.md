@@ -4,6 +4,8 @@
 
 ```pip install pyinstaller```
 
+```pip install pyzmq```
+
 ```npm install pm2@latest -g```
 
 # Development
