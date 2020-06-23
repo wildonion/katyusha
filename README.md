@@ -1,4 +1,4 @@
-# Setup
+# Development Setup
 
 ```pip install aiogram ujson aiohttp[speedups]```
 
@@ -7,8 +7,6 @@
 ```pip install pyzmq```
 
 ```npm install pm2@latest -g```
-
-# Development
 
 ```pm2 start katyusha.py```
 
