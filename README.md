@@ -4,7 +4,7 @@
 
 ```pip install -U aiogram```
 
-```pip install uvloop```
+```pip install uvloop``` ___ **NOT SUPPORTED BY WINDOWS**
 
 ```pip install aiogram ujson aiohttp[speedups]```
 
