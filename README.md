@@ -2,6 +2,10 @@
 
 ### Development Setup
 
+```pip install -U aiogram```
+
+```pip install uvloop```
+
 ```pip install aiogram ujson aiohttp[speedups]```
 
 ```pip install pyinstaller```
