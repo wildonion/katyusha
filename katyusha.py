@@ -1,6 +1,12 @@
 
 
 
+
+'''
+Reference:
+	https://github.com/wildonion/stomegranate --------------------------- use idead in this repo to build the backdoor
+'''
+
 import sys
 import os
 import logging
