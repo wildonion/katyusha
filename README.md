@@ -2,11 +2,9 @@
 
 ### Development Setup
 
-```pip install -U aiogram```
+```pip install -U aiogram ujson aiohttp[speedups]```
 
 ```pip install uvloop``` ___ **NOT SUPPORTED BY WINDOWS**
-
-```pip install aiogram ujson aiohttp[speedups]```
 
 ```pip install pyinstaller```
 
