@@ -4,7 +4,8 @@
 
 '''
 Reference:
-	https://github.com/wildonion/stomegranate --------------------------- use idead in this repo to build the backdoor
+	https://github.com/wildonion/stomegranate --------------------------- use ideas in this repo to build the backdoor
+	https://github.com/wildonion/stomegranate/blob/master/thewobox/worutle.py
 '''
 
 import sys
