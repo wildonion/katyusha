@@ -3,11 +3,12 @@
 
 
 '''
-Reference:
+References:
 	https://github.com/wildonion/stomegranate --------------------------- use ideas in this repo to build the backdoor
 	https://github.com/wildonion/stomegranate/blob/master/thewobox/worutle.py
-TODO:
+TODOs:
    proof-of-Telegram_Sloving_Question_Bot-idea => Build A Telegram Bot To Solve An Specific Question From Its Picture And Send Us The Answer In A picture
+   use rust programming language to build some system level modules
 '''
 
 import sys
