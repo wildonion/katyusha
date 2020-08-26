@@ -10,6 +10,7 @@ References:
 TODOs:
    proof-of-Telegram_Sloving_Question_Bot-idea => Build A Telegram Bot To Solve An Specific Question From Its Picture And Send Us The Answer In A picture
    use rust programming language to build some system level modules
+   build telebot APIs in rust to call them in here or build the backdoor completely in rust from scratch
 '''
 
 import sys
