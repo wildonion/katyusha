@@ -1,4 +1,5 @@
-__pycache__
-build
-dist
-katyusha.spec
+katpy/__pycache__
+katpy/build
+katpy/dist
+katpy/katyusha.spec
+katrust/target
