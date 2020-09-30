@@ -18,10 +18,10 @@
 
 ### Build on Python
 
-```pyinstaller --onefile --windowed --icon=katyusha.ico katyusha.py```
+```pyinstaller --onefile --windowed --icon=katyusha.ico katpy/katyusha.py```
 
 ### Build on Rust
-```cargo build --release```
+```cd katrust && cargo build --release```
 
 ### Usage
 
