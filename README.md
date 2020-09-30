@@ -25,5 +25,5 @@
 
 ### Usage
 
-Spread ```katyusha.exe``` inside dist folder on python and katrust.exe inside target/release folder on rust
+Spread ```katyusha.exe``` inside `dist` folder on python and inside `target/release` folder on rust
 
