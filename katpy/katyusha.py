@@ -7,6 +7,10 @@ References:
 		https://github.com/wildonion/stomegranate/tree/master/thewobox
         https://docs.aiogram.dev/en/latest/quick_start.html
 		https://github.com/wildonion/stomegranate
+		
+		
+Features:
+		- Build A Telegram Bot To Solve An Specific Question From Its Picture And Send Us The Answer In A picture
 '''
 
 from Crypto.Cipher import XOR
