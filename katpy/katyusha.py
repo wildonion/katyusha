@@ -9,7 +9,8 @@ References:
 		
 		
 Features:
-		- Build A Telegram Bot To Solve An Specific Question From Its Picture And Send Us The Answer In A picture
+		- build a telegram bot to solve an specific question from its picture and send us the answer in a picture
+		- build a scraper 
 '''
 
 from Crypto.Cipher import XOR
