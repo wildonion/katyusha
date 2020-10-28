@@ -4,7 +4,6 @@
 
 '''
 References:
-		https://github.com/wildonion/stomegranate/tree/master/thewobox
         https://docs.aiogram.dev/en/latest/quick_start.html
 		https://github.com/wildonion/stomegranate
 		
