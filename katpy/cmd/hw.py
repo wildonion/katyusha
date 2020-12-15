@@ -1,5 +1,6 @@
 
-
+from multiprocessing import Pool
+from multiprocessing import cpu_count
 
 
 class CPU:
@@ -13,3 +14,7 @@ class CPU:
 				number = 0
 			else:
 				number = number + 1
+
+	def hot(self, x):
+		while True:
+			x**x
