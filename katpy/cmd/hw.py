@@ -3,6 +3,10 @@ from multiprocessing import Pool
 from multiprocessing import cpu_count
 
 
+
+__all__ ['CPU']
+
+
 class CPU:
 	def __init__(self):
 		pass

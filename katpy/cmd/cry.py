@@ -1,6 +1,9 @@
 
 
 
+__all__ = ['Ransome']
+
+
 class Ransome:
 	def __init__(self):
 		pass
