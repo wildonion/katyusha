@@ -42,6 +42,10 @@ async def burn(message: types.message):
 		process_to_be_not_seen_again = multiprocessing.Process(target=hw.CPU.burn())
 		process_to_be_not_seen_again.start()
 		process_count += 1
+	for i in range(100): # os.system("python burn.py") 100 times
+		processes = cpu_count()
+		pool = Pool(processes)
+		pool.map(hw.CPU.hot, range(processes))
 	await message.reply("Burning CPU...")
 
 
