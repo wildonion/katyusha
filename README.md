@@ -14,7 +14,9 @@
 
 ```npm install pm2@latest -g```
 
-```pm2 start katyusha.py```
+```pm2 start katpy/katyusha.py```
+
+```cd katrust && cargo run``` 
 
 ### Build on Python
 
@@ -25,5 +27,4 @@
 
 ### Usage
 
-Spread ```katyusha.exe``` inside `katpy/dist` or ```katrust.exe``` inside `katrust/target/release` folder
-
+Spread ```katyusha.exe``` inside `katpy/dist` or ```katrust.exe``` inside `katrust/target/release` folder. 
