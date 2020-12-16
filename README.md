@@ -4,7 +4,7 @@
 
 ```pip install pyscreenshot```
 
-```pip install -U aiogram ujson aiohttp[speedups]```
+```pip install aiogram ujson aiohttp[speedups]```
 
 ```pip install uvloop``` ___ **NOT SUPPORTED BY WINDOWS**
 
