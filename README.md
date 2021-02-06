@@ -23,7 +23,7 @@
 ```pyinstaller --onefile --windowed --icon=katyusha.ico katpy/katyusha.py```
 
 ### Build on Rust
-```cd katrust && cargo build --release```
+```cd katrust && cargo run --bin katyusha --release```
 
 ### Usage
 
