@@ -2,6 +2,8 @@
 
 
 // https://docs.rs/telebot/0.3.1/telebot/
+// https://github.com/PyO3/pyo3
+// TODO - bind this socket server in python using PyO3
 
 
 // ==================================
