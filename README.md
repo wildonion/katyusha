@@ -8,7 +8,7 @@
 
 ```pm2 start katpy/katyusha.py```
 
-```cd katrust && cargo run```
+```cd katrust && cargo build```
 
 ### Build on Python
 
