@@ -2,15 +2,7 @@
 
 ### Development Setup
 
-```pip install pyscreenshot```
-
-```pip install aiogram ujson aiohttp[speedups]```
-
-```pip install uvloop``` ___ **NOT SUPPORTED BY WINDOWS**
-
-```pip install pyinstaller```
-
-```pip install pyzmq```
+```pip install -r requirements.txt```
 
 ```npm install pm2@latest -g```
 
