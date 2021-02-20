@@ -2,13 +2,13 @@
 
 ### Development Setup
 
-```pip install -r requirements.txt```
+```pip install -r katpy/requirements.txt```
 
 ```npm install pm2@latest -g```
 
 ```pm2 start katpy/katyusha.py```
 
-```cd katrust && cargo run``` 
+```cd katrust && cargo run```
 
 ### Build on Python
 
