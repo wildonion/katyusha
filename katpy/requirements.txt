@@ -1,0 +1,6 @@
+pyscreenshot
+aiogram 
+ujson
+aiohttp[speedups]
+pyinstaller
+pyzmq
