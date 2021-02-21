@@ -25,9 +25,11 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 	let listener = TcpListener::bind(&addr).await.unwrap();
 	println!("\n[+] Listening on: {}", addr);
     let sample_string = String::from("wildonion");
-    let bytes = sample_string.as_bytes(); // turn a string into buffer (asccii)
-    format!("two first bytes of sample_string are : {}", &sample_string[0..2]); // indices here are byte indices
+    let bytes = sample_string.bytes(); // turn a string into buffer (asccii)
+    format!("[+] two first bytes of sample_string are : {}", &sample_string[0..2]); // indices here are byte indices
+	println!("[+] sample_string bytes : {:?}", bytes);
 
+	
     loop {
         let (mut socket, _) = listener.accept().await?;
         println!("[+] Socket info: {:#?}", socket);
