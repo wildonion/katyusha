@@ -25,10 +25,24 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 	let addr = "0.0.0.0:8990".parse::<SocketAddr>().unwrap();
 	let listener = TcpListener::bind(&addr).await.unwrap();
 	println!("\n[+] Listening on: {}", addr);
+    
+	
+    // ============= string testing
     let sample_string = String::from("wildonion");
     let bytes = sample_string.bytes(); // turn a string into buffer (asccii)
     println!("[..] two first bytes of the string are : {}", &sample_string[0..2]); // byte indices
-	println!("[..] the string bytes : {:?}", bytes);
+    println!("[..] the string bytes : {:?}", bytes);
+	
+	let text = "hello hello from wildonion here double again again wildonion";
+	let mut map = HashMap::new();
+	for word in text.split_whitespace(){
+		let count = map.entry(word).or_insert(0); // return a mutable reference inserted or the old value
+		*count += 1; // updating the old value by dereferencing it, cause count is a mutable reference of the value 
+	}
+
+	println!("{:?}", map);
+    // ==============
+	
 	
     loop {
         let (mut socket, _) = listener.accept().await?;
