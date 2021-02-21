@@ -1,6 +1,7 @@
 
 
 
+// https://doc.rust-lang.org/book/ch08-02-strings.html
 // https://stackoverflow.com/questions/24158114/what-are-the-differences-between-rusts-string-and-str/24159933#24159933
 // https://learning-rust.github.io/docs/e4.unwrap_and_expect.html
 // https://github.com/telegram-rs/telegram-bot
@@ -26,9 +27,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 	println!("\n[+] Listening on: {}", addr);
     let sample_string = String::from("wildonion");
     let bytes = sample_string.bytes(); // turn a string into buffer (asccii)
-    format!("[+] two first bytes of sample_string are : {}", &sample_string[0..2]); // indices here are byte indices
-	println!("[+] sample_string bytes : {:?}", bytes);
-
+    println!("[..] two first bytes of the string are : {}", &sample_string[0..2]); // byte indices
+	println!("[..] the string bytes : {:?}", bytes);
 	
     loop {
         let (mut socket, _) = listener.accept().await?;
