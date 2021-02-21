@@ -1,6 +1,8 @@
 
 
 
+// https://stackoverflow.com/questions/24158114/what-are-the-differences-between-rusts-string-and-str/24159933#24159933
+// https://learning-rust.github.io/docs/e4.unwrap_and_expect.html
 // https://github.com/telegram-rs/telegram-bot
 // https://github.com/teloxide/teloxide
 // https://github.com/PyO3/pyo3
@@ -39,8 +41,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                         eprintln!("[!] Failed to read from socket; err = {:?}", e);
                         return;
                     }
-                };
-
+                };		
+		    		// NOTE - we can use match or unwrap()
+				// let data = str::from_utf8(&buf[0..n]).unwrap();
 				let data = match str::from_utf8(&buf[0..n]) {
 				        Ok(v) => v,
 				        Err(e) => panic!("[!] Invalid UTF-8 sequence: {}", e),
