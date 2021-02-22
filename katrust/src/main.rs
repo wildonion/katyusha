@@ -30,10 +30,18 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     
 	
     // ============= string testing
-    let sample_string = String::from("wildonion");
-    let bytes = sample_string.bytes(); // turn a string into buffer (asccii)
-    println!("[..] two first bytes of the string are : {}", &sample_string[0..2]); // byte indices
-    println!("[..] the string bytes : {:?}", bytes);
+	    let name = String::from("erfan");
+	    let another_name = "another erfan";
+	    let combined = name + &another_name;
+	    // name.push_str(&another_name); // name moved due to above operator
+	    println!("{}", combined);
+	    // println!("{}", name); // error - borrowed after move
+	    println!("{}", another_name);
+
+	    let sample_string = String::from("wildonion");
+	    let bytes = sample_string.bytes(); // turn a string into buffer (asccii)
+	    println!("[..] two first bytes of the string are : {}", &sample_string[0..2]); // byte indices
+	    println!("[..] the string bytes : {:?}", bytes);
 	
 	let text = "hello hello from wildonion here double again again wildonion";
 	let mut map = HashMap::new();
