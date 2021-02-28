@@ -10,7 +10,7 @@
 // https://github.com/teloxide/teloxide
 // https://github.com/PyO3/pyo3
 // TODO - bind this socket server in python using PyO3
-// TODO - build a network monitoring handler like openwrt using tokio
+// TODO - build a network monitoring handler like openwrt using tokio and a reverse proxy like ngrok
 
 
 // ==================================
