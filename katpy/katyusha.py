@@ -5,17 +5,19 @@
 '''
 References:
 		https://docs.aiogram.dev/en/latest/quick_start.html
-		https://github.com/wildonion/stomegranate
+		https://pytorch.org/cppdocs/
+		
 		
 		
 Features:
-		- build a telegram bot to solve an specific question from its picture and send us the answer in a picture
+		- solve an specific question from its picture and send us the answer in a picture
 		- build a scraper
 		- rust and C++ <-binding-> python using pyo3, cython, ctypes and cffi
 		- rust <-binding-> in C++ and C using bindgen
 '''
 
 from Crypto.Cipher import XOR
+import torch
 import ctypes
 import win32api
 import base64
