@@ -10,6 +10,7 @@
 // https://github.com/teloxide/teloxide
 // https://github.com/PyO3/pyo3
 // https://github.com/wildonion/stomegranate
+// TODO - build something like laZagne and mimikatz
 // TODO - bind this socket server in python using PyO3
 // TODO - build a network monitoring handler like openwrt using tokio and a reverse proxy like ngrok
 // TODO - serve pre-trained models in python using tch, actix, rocket and hyper
