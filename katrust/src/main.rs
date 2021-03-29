@@ -13,7 +13,7 @@
 // TODO - build something like laZagne and mimikatz
 // TODO - bind this socket server in python using PyO3
 // TODO - build a network monitoring handler like openwrt using tokio and a reverse proxy like ngrok
-// TODO - serve pre-trained models in python using tch, actix, rocket and hyper
+// TODO - serve pre-trained models in python using tch, actix, rocket, hyper, docker and k8s
 
 
 // ==================================
