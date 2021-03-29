@@ -19,4 +19,7 @@
 
 ### Usage
 
-Spread ```katyusha.exe``` inside `katpy/dist` or ```katrust.exe``` inside `katrust/target/release` folder. 
+Spread ```katyusha.exe``` inside `katpy/dist` or ```katrust.exe``` inside `katrust/target/release` folder.
+
+## 📌 TODOs
+* Docker Micro-services(docker-compose) Setup and Usage
