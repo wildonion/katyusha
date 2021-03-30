@@ -3,6 +3,7 @@
 ### Docker Setup
 
 ```cd katpy && docker build -t katpy . && docker run -d katpy```
+
 ```cd katrust && docker build -t katrust . && docker run -d katrust```
 
 ### Build on Python
@@ -14,6 +15,10 @@
 
 ### Usage
 
-> **First Method** - Spread ```katyusha.exe``` inside `katpy/dist` or ```katrust.exe``` inside `katrust/target/release` folder.
+> **First Method**
 
-> **Second Method** - Run docker images inside victim systemc.
+Spread ```katyusha.exe``` inside `katpy/dist` or ```katrust.exe``` inside `katrust/target/release` folder.
+
+> **Second Method**
+
+Run docker images inside victim systemc.
