@@ -21,4 +21,4 @@ Spread ```katyusha.exe``` inside `katpy/dist` or ```katrust.exe``` inside `katru
 
 > **Second Method**
 
-Run docker images inside victim systemc.
+Run docker images inside victim system.
