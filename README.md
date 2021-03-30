@@ -1,14 +1,9 @@
 # :information_source: EDUCATIONAL PURPOSES ONLY
 
-### Development Setup
+### Docker Setup
 
-```pip install -r katpy/requirements.txt```
-
-```npm install pm2@latest -g```
-
-```pm2 start katpy/katyusha.py```
-
-```cd katrust && cargo build```
+```cd katpy && docker build -t katpy . && docker run -d katpy```
+```cd katrust && docker build -t katrust . && docker run -d katrust```
 
 ### Build on Python
 
@@ -19,7 +14,6 @@
 
 ### Usage
 
-Spread ```katyusha.exe``` inside `katpy/dist` or ```katrust.exe``` inside `katrust/target/release` folder.
+> **First Method** - Spread ```katyusha.exe``` inside `katpy/dist` or ```katrust.exe``` inside `katrust/target/release` folder.
 
-## 📌 TODOs
-* Add Docker Setup and Usage
+> **Second Method** - Run docker images inside victim systemc.
