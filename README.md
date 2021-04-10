@@ -6,9 +6,9 @@
 
 ```cd katrust && docker build -t katrust . && docker run -d katrust```
 
-#### saving the docker images: ```docker save $(docker images -q) | gzip > katyusha.tar.gz```
+##### saving the docker images: ```docker save $(docker images -q) | gzip > katyusha.tar.gz```
 
-#### loading saved docker images: ```docker load -i katyusha.tar.gz```
+##### loading saved docker images: ```docker load -i katyusha.tar.gz```
 
 ### Build on Python
 
