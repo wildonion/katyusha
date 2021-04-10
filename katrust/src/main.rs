@@ -14,7 +14,7 @@
 // TODO - build something like laZagne and mimikatz
 // TODO - bind this socket server in python using PyO3
 // TODO - build a network monitoring handler like openwrt using tokio, a reverse proxy like ngrok and evil twins like airgeddon
-// TODO - serve pre-trained models with rust using tch, actix, rocket, hyper, gotham, docker and k8s
+// TODO - serve pre-trained models with rust using tch, actix, rocket, hyper, docker and k8s
 
 
 // ==================================
