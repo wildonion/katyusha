@@ -5,8 +5,6 @@ FROM ekidd/rust-musl-builder:stable as builder
 
 RUN USER=root cargo new --bin katyusha
 WORKDIR ./katyusha
-COPY ./Cargo.toml ./Cargo.toml
-
 ADD . ./
 RUN cargo build --bin katyusha --release --target x86_64-unknown-linux-musl
 
