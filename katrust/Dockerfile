@@ -1,35 +1,21 @@
 
 
 
-# TODOs:
-# create katyusha group and user with password
-# move the whole project into the katyusha home directory
-# change the owner of the folder containing the source code
-# run the bot in development mode using "cargo run" command
-
-
 FROM ekidd/rust-musl-builder:stable as builder
 
 RUN USER=root cargo new --bin katyusha
-WORKDIR ./core
+WORKDIR ./katyusha
 COPY ./Cargo.toml ./Cargo.toml
-RUN cargo build --bin katyusha --release
-RUN rm src/*.rs
 
 ADD . ./
-
-RUN rm ./target/x86_64-unknown-linux-musl/release/deps/katyusha*
-RUN cargo build --bin katyusha --release
+RUN cargo build --bin katyusha --release --target x86_64-unknown-linux-musl
 
 
 FROM alpine:latest
-
 ARG APP=/usr/src/app
 
-EXPOSE 8587
-
 ENV TZ=Etc/UTC \
-    APP_USER=appuser
+    APP_USER=katyusha
 
 RUN addgroup -S $APP_USER \
     && adduser -S -g $APP_USER $APP_USER
