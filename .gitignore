@@ -4,3 +4,4 @@ katpy/dist
 katpy/katyusha.spec
 katrust/target
 katrust/Cargo.lock
+.vscode
