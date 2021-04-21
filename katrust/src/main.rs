@@ -35,6 +35,16 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 	let listener = TcpListener::bind(&addr).await.unwrap();
 	println!("\n[+] Listening on: {}", addr);
     
+	  let first_name = "Pascal";
+	  let last_name = "Precht".to_string(); // turn to String
+	  let another_last_name = String::from("Precht");
+	  greet(first_name); // first_name is &str by default
+	  greet(&last_name); // last_name is passed by reference
+	  greet(&another_last_name); // another_last_name is passed by reference
+
+	fn greet(name: &str) {
+	  println!("Hello, {}!", name);
+	}
 	
     // ============= string testing
 	    let name = String::from("erfan");
