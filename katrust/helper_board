@@ -17,3 +17,4 @@ TODO - build something like laZagne and mimikatz
 TODO - bind this socket server in python using PyO3
 TODO - build a network monitoring handler like openwrt using tokio, a reverse proxy like ngrok and evil twins like airgeddon
 TODO - serve pre-trained core AI models with rust using tch, tokio, actix, rocket, hyper, docker and k8s based on streaming async paradigm
+TODO - create a new project in here using `cargo new core --bin` command
