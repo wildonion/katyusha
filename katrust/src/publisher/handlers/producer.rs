@@ -49,6 +49,7 @@ pub async fn produce(brokers: &str){
         let mut i = 0_usize;
         loop {
             // TODO - https://itnext.io/getting-started-with-kafka-and-rust-part-1-e0074961ec6b
+            // TODO - send command of burning cpu event inside the burn_cpu topic
             let device_event = GPSData::last().await; //-- getting the last data inserted into cassandra gps_data column family
             let topic = device_event.imei.to_string(); //-- getting its imei to set it as the topic for this event
             let device_event_json = serde_json::to_string_pretty(&device_event).expect("⚠️ failed to serialize device event"); //-- serializing the strucinto json

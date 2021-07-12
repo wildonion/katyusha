@@ -19,8 +19,7 @@
 
 
 
-https://github.com/telegram-rs/telegram-bot
-https://github.com/teloxide/teloxide
+
 https://blog.softwaremill.com/multithreading-in-rust-with-mpsc-multi-producer-single-consumer-channels-db0fc91ae3fa
 https://danielkeep.github.io/tlborm/book/
 https://cetra3.github.io/blog/implementing-a-jobq/
