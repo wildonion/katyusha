@@ -8,6 +8,8 @@
 
 * **Watch _streamer_ subscriber microservice:** ```cargo watch -x 'run --bin subscriber'```
 
+* **Watch _botter_ microservice:** ```cargo watch -x 'run --bin botter'```
+
 ### Docker Setup
 
 ```cd katpy && docker build -t katpy . && docker run -d katpy```
