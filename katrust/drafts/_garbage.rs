@@ -70,6 +70,59 @@ fn generate_workout(intensity: u32, random_number: u32) {
 
 fn main(){
 	
+        // ------------------------------ testing trait Copy and Clone for closure ------------------------------
+        let outside_num = 353;
+            let callback = move |num: i32| {
+                let got_outside_num = outside_num;
+                let copy_of_num = num; //-- trait Copy is implemented for i32 thus has trait Clone so we don't need to clone it and we can also access it after it's moved into copy_of_num var 
+            };
+
+        // ------------------------------ testing trait Copy and Clone for i32 and String/str ------------------------------
+        let name = String::from("wildonion");
+        // this is no ok cause name is on the heap with a saved reference to the heap on the stack also it doesn't implement Copy trait
+        // the Clone trait is implemented for that because of double free pointer issue at runtime and the implementation of drop trait.
+        // let another_name = name;
+        // println!("name is droped {:?}", name); 
+        let another_name = name.clone(); // we used the clone method here to copy the whole the reference on the stack and the whole data on the heap as well 
+        let another_name = &name; // this is ok cause the copy trait is implemented for &T which in our case is &String which is &str or string slice which is saved somewhere in the memory(heap, stack or binary)
+        let number: i32 = 3534;
+        let another_number = number; // this is ok cause the number it's on the stack thus the drop trait is not implemented for that(still got the number even it's moved) so we can copy the whole number variable into another_number
+
+        // ------------------------------ testing trait Copy and Clone for u8 and Vec<u8> ------------------------------
+        // u8 implements Copy
+        let x: u8 = 123;
+        let y = x;
+        // x can still be used
+        println!("x={}, y={}", x, y);
+
+        // Vec<u8> implements Clone, but not Copy
+        let v: Vec<u8> = vec![1, 2, 3];
+        let w = v.clone();
+        //let w = v // This would *move* the value, rendering v unusable.
+
+        // ------------------------------ testing trait Copy and Clone for structs ------------------------------
+        #[derive(Debug, Clone, Copy)]
+        pub struct PointCloneAndCopy {
+            pub x: f64,
+        }
+
+        #[derive(Debug, Clone)]
+        pub struct PointCloneOnly {
+            pub x: f64,
+        }
+
+        fn test_copy_and_clone() {
+            let p1 = PointCloneAndCopy { x: 0. };
+            let p2 = p1; // because type has `Copy`, it gets copied automatically.
+            println!("{:?} {:?}", p1, p2);
+        }
+
+        fn test_clone_only() {
+            let p1 = PointCloneOnly { x: 0. };
+            let p2 = p1; // because type has no `Copy`, this is a move instead. to avoid moving we can clone the p1
+            println!("{:?} {:?}", p1, p2);
+	}
+
 	
 
     // reading image pixel or bytes
