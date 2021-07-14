@@ -10,7 +10,7 @@ use std::{cmp::Eq, hash::Hash};
 use std::fmt::Display;
 use std::cell::RefCell;
 use std::rc::{Rc, Weak};
-
+use std::fs;
 
 
 
@@ -69,6 +69,16 @@ fn generate_workout(intensity: u32, random_number: u32) {
 
 
 fn main(){
+	
+	
+
+    // reading image pixel or bytes
+    // ...
+    if let Ok(bytes) = fs::read("/home/wildonion/Pictures/test.jpg"){
+         println!("image bytes >>>> {:?}", bytes);
+    }
+
+	
 
     'outer: for x in 0..5 {
         'inner: for y in 0..5 {
