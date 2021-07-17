@@ -1,14 +1,15 @@
 # :information_source: EDUCATIONAL PURPOSES ONLY
 
-### Rust Development Setup
+### Rust Development Setup on Linux
 
 ```sudo apt install libssl-dev && sudo apt install build-essential && sudo apt install cmake && sudo apt install libpq-dev && cargo install systemfd cargo-watch```
 
-* **Watch _streamer_ publisher microservice:** ```cargo watch -x 'run --bin publisher'```
+### Rust Development Setup on Windows
 
-* **Watch _streamer_ subscriber microservice:** ```cargo watch -x 'run --bin subscriber'```
+```cargo install systemfd cargo-watch```
 
-* **Watch _botter_ microservice:** ```cargo watch -x 'run --bin botter'```
+
+* **Watch _botter_ service:** ```cargo watch -x 'run --bin botter'```
 
 ### Docker Setup
 
@@ -22,16 +23,9 @@
 
 ```cargo build --bin botter --release --manifest-path katrust/Cargo.toml ```
 
-```cargo build --bin publisher --release --manifest-path katrust/Cargo.toml ```
-
-```cargo build --bin subscriber --release --manifest-path katrust/Cargo.toml ```
-
 ### Rust Usage
 
 Spread ```botter.exe``` inside `katrust/target/release` folder.
-
-Spread ```subscriber.exe``` inside `katrust/target/release` folder.
-
 
 ### Pythobn Usage
 
