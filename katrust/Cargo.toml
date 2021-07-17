@@ -1,5 +1,5 @@
 [package]
-name = "streamer"
+name = "botter"
 version = "0.1.0"
 authors = ["wildonion <marefimoghaddam@unixerr.com>"]
 edition = "2018"
@@ -7,7 +7,7 @@ edition = "2018"
 
 
 [dependencies]
-rdkafka = { version = "0.25", features = ["cmake-build"] }
+teloxide = { version = "0.4", features = ["auto-send", "macros"] }
 tokio = { version = "1.7.0", features = ["full"]  }
 reqwest = { version = "0.11", default-features = false, features = ["blocking", "json", "rustls-tls"] }
 serde = "1.0.125"
@@ -18,24 +18,16 @@ log = "0.4.14"
 dotenv = "0.15.0"
 env_logger = "0.8.3"
 hex = "0.4.3"
+pretty_env_logger = "0.4.0"
 
 
 
 [lib]
 name = "cmd"
-path = "src/publisher/lib.rs"
+path = "src/lib.rs"
 
-
-[[bin]]
-name = "publisher"
-path = "src/publisher/main.rs"
-
-
-[[bin]]
-name = "subscriber"
-path = "src/subscriber/main.rs"
 
 
 [[bin]]
 name = "botter"
-path = "src/botter/main.rs"
+path = "src/main.rs"
