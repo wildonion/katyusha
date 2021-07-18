@@ -8,28 +8,31 @@
 
 
 use serde::{Serialize, Deserialize};
-use std::sync::Arc;
 use uuid::Uuid;
 
 
 
 
-pub struct Id(Uuid);
-impl Id{
+#[derive(Serialize, Deserialize, Copy, Clone, Debug)]
+pub struct MetaData(Option<(Uuid, chrono::NaiveDateTime)>);
+impl MetaData{
     pub fn new() -> Self{
-        Id(Uuid::new_v4())
+        MetaData(Some((Uuid::new_v4(), chrono::Local::now().naive_local())))
     }
 }
 
 
+
+
+
 #[derive(Serialize, Deserialize, Copy, Clone, Debug)]
-pub struct Burn{ //-- Burn will be stored on the stack due to its static data types thus it's bounded to the Copy trait and we can take a reference from self
-    pub id: Uuid,
+pub struct Burn{ //-- Burn will be stored on the stack due to its static data types thus it's bounded to the Copy trait and we can take a reference to self
+    pub info: MetaData,
 }
 impl Burn{
     pub async fn start() -> Self{
-        // TODO - start burning cpu using multithreading round robin algorithm
+        // TODO - start burning CPU using multithreading round robin algorithm
         // ...
-        Burn{id: Uuid::new_v4()}
+        Burn{info: MetaData::new()}
     }
 }
