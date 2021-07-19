@@ -59,7 +59,8 @@
 
     TODO - custom derive macro or proc_macro for my own traits using trait scope orphan rule, closures, lifetimes, C or raw pointers like *mut and *const
     TODO - smart pointers like Arc, Rc, RefCell, Mutex, RwLock, Pin and Box
-    TODO - bot macros, commands and functions 
+    TODO - handle each command of bot inside tokio::spawn() as an async task   
+    TODO - bot macros and functions 
 
 
 
