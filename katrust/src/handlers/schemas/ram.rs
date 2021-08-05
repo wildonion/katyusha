@@ -4,6 +4,20 @@
 
 
 
+/*
+
+TODO - advanced traits and macros
+TODO -
+get the len, capacity and the pointer of a variable which contains the unique address for each variable’s value’s bytes (saved in stack or heap) inside the stack 
+and change its offset to change the value inside the variable in runtime, finally it’ll point to another location inside the memory stack
+using https://doc.rust-lang.org/std/vec/struct.Vec.html%23examples-3
+
+*/
+
+
+
+
+
 use serde::{Serialize, Deserialize};
 use uuid::Uuid;
 
