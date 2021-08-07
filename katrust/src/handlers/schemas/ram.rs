@@ -6,9 +6,18 @@
 
 /*
 
-TODO - get the len, capacity and the pointer of a variable which contains the unique address for each variable’s value’s bytes (saved in stack or heap) inside the stack 
-       and change its offset to change the value inside the variable in runtime, finally it’ll point to another location inside the memory stack using https://doc.rust-lang.org/std/vec/struct.Vec.html#examples-3
 
+TODO - get the len, capacity and the pointer of a variable which contains the unique address for each variable’s value’s bytes (saved in stack or heap) inside the stack 
+       and change its offset to change the value inside the variable in runtime, finally it’ll point to another location inside the memory stack
+       
+-------------
+unsafe tricks
+-------------
+https://gist.github.com/wildonion/4f1956d9908e348a74b4381458e474e1#file-unsafer-rs
+https://github.com/wildonion/aravl/blob/master/microservices/device/src/schemas/device.rs
+https://pramode.in/2016/09/13/using-unsafe-tricks-in-rust/
+    
+    
 */
 
 
