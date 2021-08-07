@@ -2,13 +2,12 @@
 
 
 
-
-
 /*
 
 
-TODO - get the len, capacity and the pointer of a variable which contains the unique address for each variable’s value’s bytes (saved in stack or heap) inside the stack 
-       and change its offset to change the value inside the variable in runtime, finally it’ll point to another location inside the memory stack
+NOTE - get the len, capacity and the pointer of a variable which contains the unique address 
+       for each variable’s value’s bytes (saved in stack or heap) inside the stack and change 
+       its offset to change the value inside the variable in runtime, finally it’ll point to another location inside the memory stack
        
 -------------
 unsafe tricks
