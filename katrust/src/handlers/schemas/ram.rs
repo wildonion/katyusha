@@ -34,7 +34,7 @@ impl MetaData{
 
 
 #[derive(Serialize, Deserialize, Copy, Clone, Debug)]
-pub struct Inject{ //-- Burn will be stored on the stack due to its static data types thus it's bounded to the Copy trait and we can take a reference from self
+pub struct Inject{ //-- Inject will be stored on the stack due to its static data types thus it's bounded to the Copy trait and we can take a reference from self
     pub info: MetaData,
 }
 impl Inject{
