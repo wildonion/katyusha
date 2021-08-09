@@ -7,7 +7,7 @@
 
 
 
-
+    https://gist.github.com/wildonion/4f1956d9908e348a74b4381458e474e1#file-mactrait-rs
     https://doc.rust-lang.org/std/pin/index.html
     https://blog.softwaremill.com/multithreading-in-rust-with-mpsc-multi-producer-single-consumer-channels-db0fc91ae3fa
     https://danielkeep.github.io/tlborm/book/
@@ -24,8 +24,7 @@
     https://dev.to/5422m4n/rust-macro-rules-in-practice-40ne
     https://github.com/teloxide/teloxide/tree/dev/examples
     https://github.com/TeXitoi/structopt
-    https://gist.github.com/wildonion/4f1956d9908e348a74b4381458e474e1
-
+    https://github.com/wildonion/aravl/blob/master/docs/rust.rules
 
 
 
