@@ -5,8 +5,7 @@
 
 /*
 
-
-
+    https://gist.github.com/wildonion/4f1956d9908e348a74b4381458e474e1
     https://gist.github.com/wildonion/4f1956d9908e348a74b4381458e474e1#file-mactrait-rs
     https://doc.rust-lang.org/std/pin/index.html
     https://blog.softwaremill.com/multithreading-in-rust-with-mpsc-multi-producer-single-consumer-channels-db0fc91ae3fa
