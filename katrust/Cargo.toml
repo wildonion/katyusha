@@ -8,7 +8,7 @@ edition = "2021"
 
 [dependencies]
 teloxide = { version = "0.4", features = ["auto-send", "macros"] }
-tokio = { version = "1.7.0", features = ["full"]  }
+tokio = { version = "1.10.0", features = ["full"]  }
 reqwest = { version = "0.11", default-features = false, features = ["blocking", "json", "rustls-tls"] }
 serde = "1.0.125"
 serde_json = "1.0.64"
