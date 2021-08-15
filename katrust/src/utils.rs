@@ -13,6 +13,7 @@
     https://cetra3.github.io/blog/implementing-a-jobq/
     https://cetra3.github.io/blog/implementing-a-jobq-with-tokio/
     https://docs.rs/tokio/1.7.1/tokio/sync/index.html
+    https://danielkeep.github.io/practical-intro-to-macros.html
     https://blog.logrocket.com/macros-in-rust-a-tutorial-with-examples/
     https://blog.logrocket.com/procedural-macros-in-rust/
     https://github.com/cksac/dataloader-rs
