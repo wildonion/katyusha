@@ -7,10 +7,9 @@
 
 
 
-    https://github.com/wildonion/maci
+    https://github.com/wildonion/mactrait
     https://github.com/wildonion/aravl/blob/master/docs/rust.rules
     https://gist.github.com/wildonion/4f1956d9908e348a74b4381458e474e1
-    https://gist.github.com/wildonion/4f1956d9908e348a74b4381458e474e1#file-traiter-rs
     https://doc.rust-lang.org/std/pin/index.html
     https://blog.softwaremill.com/multithreading-in-rust-with-mpsc-multi-producer-single-consumer-channels-db0fc91ae3fa
     https://danielkeep.github.io/tlborm/book/
