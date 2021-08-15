@@ -4,6 +4,9 @@
 
 
 /*
+
+
+
         
     https://github.com/wildonion/aravl/blob/master/docs/rust.rules
     https://gist.github.com/wildonion/4f1956d9908e348a74b4381458e474e1
@@ -56,7 +59,7 @@
 
 
 
-    TODO - custom derive macro or proc_macro for my own traits using trait scope orphan rule, closures, lifetimes, C or raw pointers like *mut and *const
+    TODO - declarative macro or proc_macro for my own traits using trait scope orphan rule, closures, lifetimes, C or raw pointers like *mut and *const
     TODO - smart pointers like Arc, Rc, RefCell, Mutex, RwLock, Pin and Box
     TODO - handle each command of bot inside tokio::spawn() as an async task   
     TODO - bot macros and functions 
