@@ -4,7 +4,8 @@
 
 
 /*
-
+        
+    https://github.com/wildonion/aravl/blob/master/docs/rust.rules
     https://gist.github.com/wildonion/4f1956d9908e348a74b4381458e474e1
     https://gist.github.com/wildonion/4f1956d9908e348a74b4381458e474e1#file-traiter-rs
     https://doc.rust-lang.org/std/pin/index.html
@@ -14,17 +15,15 @@
     https://cetra3.github.io/blog/implementing-a-jobq-with-tokio/
     https://docs.rs/tokio/1.7.1/tokio/sync/index.html
     https://danielkeep.github.io/practical-intro-to-macros.html
+    https://doc.rust-lang.org/book/ch19-06-macros.html
     https://blog.logrocket.com/macros-in-rust-a-tutorial-with-examples/
     https://blog.logrocket.com/procedural-macros-in-rust/
-    https://github.com/cksac/dataloader-rs
     http://gradebot.org/doc/ipur/trait.html
     https://doc.rust-lang.org/std/sync/struct.Arc.html
     https://doc.rust-lang.org/std/sync/struct.Mutex.html
-    http://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/procedural-macros.html
-    https://dev.to/5422m4n/rust-macro-rules-in-practice-40ne
     https://github.com/teloxide/teloxide/tree/dev/examples
     https://github.com/TeXitoi/structopt
-    https://github.com/wildonion/aravl/blob/master/docs/rust.rules
+    
 
 
 
