@@ -7,7 +7,6 @@
 
 
 
-    https://github.com/wildonion/mactrait
     https://github.com/wildonion/aravl/blob/master/docs/rust.rules
     https://gist.github.com/wildonion/4f1956d9908e348a74b4381458e474e1
     https://doc.rust-lang.org/std/pin/index.html
