@@ -3,68 +3,9 @@
 
 
 
-/*
-
-
-
-    https://github.com/wildonion/aravl/blob/master/docs/rust.rules
-    https://gist.github.com/wildonion/4f1956d9908e348a74b4381458e474e1
-    https://doc.rust-lang.org/std/pin/index.html
-    https://blog.softwaremill.com/multithreading-in-rust-with-mpsc-multi-producer-single-consumer-channels-db0fc91ae3fa
-    https://danielkeep.github.io/tlborm/book/
-    https://cetra3.github.io/blog/implementing-a-jobq/
-    https://cetra3.github.io/blog/implementing-a-jobq-with-tokio/
-    https://docs.rs/tokio/1.7.1/tokio/sync/index.html
-    http://gradebot.org/doc/ipur/trait.html
-    https://doc.rust-lang.org/std/sync/struct.Arc.html
-    https://doc.rust-lang.org/std/sync/struct.Mutex.html
-    https://github.com/teloxide/teloxide/tree/dev/examples
-    https://github.com/TeXitoi/structopt
-    
-
-
-
-
-
-    we can’t just pass the receiver between multiple threads cause trait Clone which is a super trait of Copy is not implemented for the receiver thus we can’t clone it to fix the issue cause if a type is Copy its Clone needs to return *self.
-    Multiple producer means multiple threads own the receiver and single consumer means only one of them can mutate and get the job or task from the receiver at a time.
-    to fix the issue we have to take an atomic reference from the receiver using Arc in order to clone it for passing between multiple threads and for mutating it we have to 
-    put it inside a Mutex to insure that only one thread can change the content of the receiver at a time. this is done by waiting on the receiver until a job or task becomes 
-    available to the down side of the channel then locking on the receiver to acquire the mutex.
-    the receiver of tokio mpsc channel is shareable between tokio::spawn() threads so we don’t need to take an atomic reference and put it inside the Mutex.
-
-
-    clone data structure if you want to move them between threads so trait Clone must be implemented for them otherwise clone them using Arc.
-    thread safe coding is about to putting the shareable receiver (cloned with Arc) inside a Mutex in order to lock on the incoming task from the sender to prevent other threads from mutating the task at a time.
-    
-    
-    live streaming is done using socket, futures, threadpool and mpsc protocol from scratch
-    tokio::spawn() is a multithreaded async task handler based on mpsc protocol
-
-
-    we can't have a clone from the receiver in mpsc protocol to fix the issue cause if a type is Copy it must have Clone also and its Clone needs to return *self
-    can't clone a data structure unless the trait Clone is implemented for that otherwise in order to move it between threads we have to clone it using Arc
-    every Copy type is also required to be Clone and if T: Copy, x: T, and y: &T, then let x = y.clone(); is equivalent to let x = *y;
-    when we derive a Copy implementation Clone is also required cause it's a super trait of Copy.
-
-
-    if a type imeplements trait Copy means we can clone it (cause trait Clone is a super trait of Copy) and also assign the variable into another one without losing the ownership of our variable
-
-
-
-    TODO - declarative macro or proc_macro for my own traits using trait scope orphan rule, closures, lifetimes, C or raw pointers like *mut and *const
-    TODO - smart pointers like Arc, Rc, RefCell, Mutex, RwLock, Pin and Box
-    TODO - handle each command of bot inside tokio::spawn() as an async task   
-    TODO - bot macros and functions
-
-
-
-
-
-
-*/
-
-
+   
+// https://github.com/teloxide/teloxide/tree/dev/examples
+// https://github.com/TeXitoi/structopt
 
 
 
